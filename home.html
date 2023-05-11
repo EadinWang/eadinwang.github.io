@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- import the latest version of hydra synth-->
+    <script src="https://unpkg.com/hydra-synth"></script>
+
+	
+	<title>eadinwang</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+	<style type="text/css"></style>
+	<link href="eadin-home.css" rel="stylesheet" type="text/css">
+	<script src="https://unpkg.com/hydra-synth"></script>
+</head>
+	
+	
+<body>
+<div class="container">
+	<nav id="nav-top">
+		<table id="table-top">
+		<tbody>
+			<tr>
+			  <td align="left"><a href="/home.html">E</a></td>
+			  <td align="center"><a href="#home-about">About</a></td>
+			  <td align="center"><a href="#home-work">Work</a></td>
+			</tr>
+		</tbody>
+		</table>
+	</nav>
+	
+	<!--name-->
+	<div class="home-name">
+	  <p class="eadin-wang">Eadin Wang</p>
+		<p class="description">Interested in Connections &amp; Communications<br>
+Design / Art / New Media</p>
+		
+		
+	<!--arrow-->	
+	<div class="down">
+	<div class="down-arrow"></div>
+	</div>
+		
+		
+	</div>
+	
+	<!--hydra-->
+	<div id="hydra">
+	<div id="text-overlay">My Text Overlay
+		<p>osc(40)<br>
+			&emsp;.color([.9,.8,.7],[.6,1,.4,1],[1,0,1,1])<br>
+			&emsp;.colorama([0.8,0.23])<br>
+			&emsp;.saturate(0.4)<br>
+			&emsp;.brightness(0.4)<br>
+			&emsp;.out(o1)<br><br>
+		src(o1)<br>
+			&emsp;.color(0,0,0,1)<br>
+			&emsp;.layer(o1)<br>
+			&emsp;.modulate(noise(5,.01))<br>
+			&emsp;.layer(shape(3).luma())<br>
+			&emsp;.rotate(() = &gt; time/2)<br>
+			&emsp;.out(o2)<br>
+		render(o2)</p>
+	</div>
+
+	<canvas id="myCanvas">
+
+    <script>
+      // create a new hydra-synth instance
+      var hydra = new Hydra({
+        canvas: document.getElementById("myCanvas"),
+        detectAudio: false,
+        enableStreamCapture: false,
+      })
+	  osc(40).color([.9,.8,.7],[.6,1,.4,1],[1,0,1,1]).colorama([0.8,0.23]).saturate(0.4).brightness(0.4).out(o1)
+		src(o1).color(0,0,0,1).layer(o1).modulate(noise(5,.01)).layer(shape(3).luma()).rotate(() => time/2).out(o2)
+		render(o2)
+      
+		const textOverlay = document.querySelector('#text-overlay')
+
+		textOverlay.style.zIndex = '999'
+    </script>
+	</canvas>
+	</div>
+	
+<!--
+  <nav id="nav-work">
+	<table id="table-work">
+  	<tbody>
+    	<tr>
+		  <td align="center"><a href="about.html">Photography</a></td>
+		  <td align="center"><a href="#">Design & Tech</a></td>
+		  <td align="center"><a href="http://www.howardbeaver.com">Misc.</a></td>
+    	</tr>
+  	</tbody>
+	</table>
+</nav>
+-->
+
+	
+<!--about-->
+	<div class="section" id="home-about">
+		<h1>About</h1>
+	  <div class="content-about">
+		<div class="container-about">    
+	        <div id="img-self"><img src="image/myself.jpg" width="100%" style="height=40px" alt="photo"/></div>
+	        <p id="self-intro">My name is Eadin/翌婷！<br><br>Grown up in China<br>Currently a junior studying <a href="https://ima.shanghai.nyu.edu/" target="_blank" rel="noopener noreferrer"><u><strong>Interactive Media Arts</strong></u></a> at NYU Shanghai</p>
+	  	</div>
+	  <br>
+		<div id="interest">
+		<p>ON: I'm interested in <strong class="highlight">interactive media, design, philosophy of tech, psychology and communication</strong >.<br>OFF: I'm interested in <strong class="highlight">photography, Japanese TV shows and observing my surroundings</strong>.<br>
+		Currently paving my way for a <strong class="highlight">product design/HCI related</strong> career.</p> <p><a href="https://www.linkedin.com/in/eadin-wang-240075206/" target="_blank">Linkedin Page</a></p></div>
+	</div>
+  </div>
+	
+
+	
+<!--work-->
+	<div class="section" id="home-work">
+		<h1>Work</h1>
+	<table id="table-work">    
+	    <tbody>
+	      <tr>
+	        <td class="change-td"><a href="/herenow.html"><img src="work-images/thumb1.jpg" class="img-work" width="100%" alt="cover"/><h4>Here&amp;Now 此时此地</h4></a></td>
+	        <td class="change-td"><a href="botanical-museum.html"><img src="work-images/thumb2.jpg" class="img-work" width="100%" alt="cover"/><h4>L'Oréal Botanical Museum</h4></a></td></tr>
+			<tr>
+		  	<td class="change-td"><a href="zone.html"><img src="work-images/thumb3.jpg" class="img-work" width="100%" alt="cover"/><h4>Zone</h4></a></td>
+			<td class="change-td"><a href="composition.html"><img src="work-images/thumb4.jpg" 侧 class="img-work" width="100%" alt="cover"/><h4>Composition</h4></a></td></tr>
+
+        </tbody>
+	  </table>
+	  
+  </div>
+	
+<!--footer-->
+  <footer>
+	<p><strong>Email: </strong>yw4764@nyu.edu<br><strong>Phone: </strong>+86 13771809695 / +1 3322429734</p>
+	</footer>
+</div>
+
+<!-- animation-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script>
+	var controller = new ScrollMagic.Controller();
+
+
+	var scene1 = new ScrollMagic.Scene({
+	  triggerElement: '#home-about',
+	  triggerHook: 0.6,
+	})
+	.setTween(gsap.timeline()
+		.from('#home-about', { opacity: 0 })
+		.from('#home-about h1', { opacity: 0, y: 50 }, '-=0.2')
+		.from('.container-about', { opacity: 0, y: 50 }, '-=0.15')
+		.from('#interest', { opacity: 0, y: 50 }, '-=0.15')
+	)
+	.addTo(controller);
+
+	var scene2 = new ScrollMagic.Scene({
+	  triggerElement: '#home-work',
+	  triggerHook: 0.6,
+	})
+	.setTween(gsap.timeline()
+		.from('#home-work', { opacity: 0 })
+		.from('#home-work img', { opacity: 0, y: 50 }, '-=0.15')
+		.from('#home-work h4', { opacity: 0, y: 50 }, '-=0.15')
+		.from('#home-work p', { opacity: 0, y: 50 }, '-=0.15')
+	)
+	.addTo(controller);
+
+	var scene3 = new ScrollMagic.Scene({
+		offset: 200
+	})
+	.setTween(gsap.timeline()
+	  .from('.down', { opacity: 1 })
+	  .from('.down', { opacity: 1 }, '+=0.9')
+	)
+	.addTo(controller);
+	
+	
+</script>		
+	
+</body>
+</html>

@@ -1,0 +1,301 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+body{
+	background-color: #FFFAF6;
+	color: #696161;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+a:link {
+	color: #696161;
+	text-decoration: none;
+}
+a:visited {
+    color: #696161;
+	text-decoration: none;
+}
+a:hover {
+    color: #EB827C;
+}
+
+
+h1{
+    color: #75658A;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 60px;
+}
+h2 {
+    font-size: 36px;
+    color: #75658A;
+	font-family: 'IBM Plex Mono', sans-serif;
+}
+h3{
+	font-size:28px;
+	font-family: 'IBM Plex Mono', sans-serif;
+}
+h4{
+	font-size:18px;
+}
+
+
+#myCanvas {
+	z-index: 0;
+	position:absolute;
+	right: 10vw;
+	top: 200px;
+	width: 22vw;
+	height: 22vw;
+}
+#text-overlay {
+	position: absolute;
+	width: 22vw;
+	height: 22vw;
+	right: 10vw;
+	top: 200px;
+	color: greenyellow;
+	font-size: 9px;
+	line-height: 1.2;
+}
+
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+nav  {
+    font-family: 'IBM Plex Mono', sans-serif;
+    color: #696161;
+}
+#nav-top{
+	position:fixed;
+	top:0;
+	left: 0; 
+	z-index: 9999; 
+	width: 100%; 
+	height: 60px;
+	font-size: 20px;
+	font-weight: 600;
+}
+#table-top{
+	border: "0";
+	width: 100%;
+	padding-top: 12px;
+	padding-right: 30px;
+    padding-left: 30px;
+	
+}
+#table-top tr td:nth-child(1) {
+  width:55%;
+}
+#table-top tr td:nth-child(2) {
+  width:15%;
+}
+#table-top tr td:nth-child(3) {
+  width:15%;
+}
+#table-top tr td:nth-child(4) {
+  width:15%;
+}
+
+.home-name {
+	height: calc(100vh - 60px);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.eadin-wang{
+	font-size: 90px;
+	font-family: 'IBM Plex Mono', monospace;
+	font-weight: 600;
+	padding-top: 200px;
+	color:#EB827C; 
+}
+.description {
+    margin-top: -75px;
+	font-size: 21px;  
+}
+
+.down{
+	position: absolute;
+	width: 80%;
+	bottom: 0px; 
+	height: 100px;
+	padding-top: 50px;
+}
+.down-arrow {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  animation: jumpInfinite 2s infinite;
+}
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
+
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+
+.img-work{
+	vertical-align:top;
+}
+
+.section{
+    padding-left: 10vw;
+    padding-right: 10vw;
+	padding-top: 3%;
+}
+#home-about{
+	height: 80vh;
+}
+.container-about{
+	display: flex;
+	width: 100%;
+}
+
+#img-self{
+	width: calc(5% + 200px);
+	vertical-align: middle;
+}
+#self-intro{
+	margin-left: 5%;
+	vertical-align: middle;
+	padding-top: 5%;
+}
+
+.highlight{
+	color:#75658A;
+}
+
+#table-work{
+	border-collapse:inherit;
+    border-spacing: 10px;
+    table-layout: fixed;
+    border: 0;
+    width: 100%;
+}
+
+
+footer{
+	bottom:0;
+	margin-top: -20px;
+	padding-top: 10px;
+	height: 120px;
+	text-align: center;
+	font-family: 'IBM Plex Mono', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+
+
+@media (max-width: 1020px){
+	body{
+	font-size: 16px;
+}
+	h1{
+    font-size: 40px;
+}
+	h4{
+    font-size: 16px;
+}
+	#nav-top{
+	height: 50px;
+	font-size: 16px;
+	background-color: #FFFAF6;
+}
+	#table-top tr td:nth-child(1) {
+		display: none;
+	}
+	
+	#myCanvas {
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	top: 60px;
+	width: 70vw;
+	height: 70vw;
+}
+	#text-overlay {
+	left: 15vw;
+	top: 80px;
+	width: 70vw;
+	height: 70vw;
+	font-size: 7px;
+	line-height: 1;
+}
+	
+	.home-name {
+	height: auto;
+	margin-top: calc(72vw - 140px);
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+	.eadin-wang{
+	font-size:80px;
+	text-align: center;
+		
+}
+	.description {
+		vertical-align: super;
+		margin-top: -80px;
+		font-size: 20px;
+		text-align: center;
+}
+	.down{
+		display:none;
+}
+	
+	#home-about{
+		height: auto;
+}
+	.container-about{
+		display: block;
+	}
+
+	#img-self{
+		width: 100%;
+	}
+	#self-intro{
+		margin-left: 0;
+		padding-top: 5%;
+}
+	
+	#table-work{
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
+	.change-td {
+		display: block;
+		}
+	footer{
+		font-size: 11px;
+}
+}
